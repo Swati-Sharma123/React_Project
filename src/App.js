@@ -20,6 +20,8 @@ const App = ()=>
 
   function addToArray(id, text, completed)
   {
+
+  
     let tempTodoObject = {
       id: id,
       text: text,
