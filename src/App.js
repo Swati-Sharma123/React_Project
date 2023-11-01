@@ -85,6 +85,7 @@ function editTodo(id){
 function updateTodo(){
   console.log("______To do updated---------")
   console.log("editingFlag: "+editingFlag)
+  console.log("tepm ?"+todo)
   let tempTodo = todo.map(element => 
     {
       if(element.id == editingFlag)
@@ -93,6 +94,9 @@ function updateTodo(){
       }
       return element
     })
+    console.log("temp ?"+tempTodo)
+
+    setEditing(-1)
     setTodo([...tempTodo])
 }
   return <div>
@@ -115,11 +119,10 @@ function updateTodo(){
                       //editing Front End
                       <div>
                       <input type="checkbox" onClick={()=>checklistener(element.id)}></input>
-                      <input type="text" value={element.text} placeholder="Update here" id="editTodo"/>
+                      <input type="text" Value={element.text} placeholder="Update here" id="editTodo"/>
                         <button onClick={()=>deleteTodo(element.id)}>Delete</button>
-                      <button onClick={()=>editTodo(element.id) }>Save</button>
-                    </div> :
-                      
+                      <button onClick={()=>updateTodo(element.id) }>Save</button>
+                    </div> :                      
                    //incompleted todo
                    <div>
                       <input type="checkbox" onClick={()=>checklistener(element.id)}></input>
