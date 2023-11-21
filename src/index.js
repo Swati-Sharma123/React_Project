@@ -6,7 +6,10 @@ import "./index.css";
 ReactDOM.render(
        <>
        
-        <App/>
+        <App name="swati"/>
+        
+        <App sname="Sharma"/>
+
        </>,
        
   document.getElementById("root") );
